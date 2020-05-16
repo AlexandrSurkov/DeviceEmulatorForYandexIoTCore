@@ -16,7 +16,7 @@ namespace IoTDeviceEmulator
 
             var rootCaCrt = new X509Certificate2(X509Certificate.CreateFromSignedFile("rootCA.crt"));
 
-            var deviceEmulator = new DeviceEmulator(
+            var deviceEmulator = new DeviceEmulator(Guid.NewGuid().ToString(),
                 new IDataSource[]
                 {
                     new HumidityDataSource(),

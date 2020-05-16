@@ -16,10 +16,13 @@ namespace Flekosoft.Emulation.Iot.Common
         private readonly object _timerSyncObject = new object();
         private int _sendDataInterval;
         private readonly ICommunicationInterface _communicationInterface;
+        private readonly string _deviceId;
 
-        public DeviceEmulator(IDataSource[] dataSources, ICommunicationInterface communicationInterface)
+        public DeviceEmulator(string deviceId, IDataSource[] dataSources, ICommunicationInterface communicationInterface)
         {
+            IncludeTimeStamp = true;
             _communicationInterface = communicationInterface;
+            _deviceId = deviceId;
             _communicationInterface.NewDataFromServerEvent += _communicationInterface_NewDataFromServerEvent;
             _dataSources.AddRange(dataSources);
             SendDataIntervalMs = 1000;
@@ -37,7 +40,9 @@ namespace Flekosoft.Emulation.Iot.Common
             try
             {
                 dynamic data = new JObject();
-                data.TimeStamp = DateTime.Now.ToString("yyyy-MM-dd'T'HH:mm:ss.fffK", DateTimeFormatInfo.InvariantInfo);
+                data.DeviceId = _deviceId;
+                if (IncludeTimeStamp)
+                    data.TimeStamp = DateTime.Now.ToString("yyyy-MM-dd'T'HH:mm:ss.fffK", DateTimeFormatInfo.InvariantInfo);
                 var list = new List<JObject>();
                 foreach (IDataSource source in _dataSources)
                 {
@@ -57,7 +62,7 @@ namespace Flekosoft.Emulation.Iot.Common
             {
                 AppendExceptionLogMessage(ex);
             }
-            
+
         }
 
         protected void ParseDataFromServer(string jsonData)
@@ -85,7 +90,7 @@ namespace Flekosoft.Emulation.Iot.Common
             }
         }
 
-        
+        public bool IncludeTimeStamp { get; set; }
 
         public int SendDataIntervalMs
         {

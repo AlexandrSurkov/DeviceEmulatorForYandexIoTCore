@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoTDeviceEmulator", "IoTDeviceEmulator\IoTDeviceEmulator.csproj", "{BDBAAE59-035D-4027-AFBF-31092C6FA22E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flekosoft.Emulation.Iot.Common", "Flekosoft.Emulation.Iot.Common\Flekosoft.Emulation.Iot.Common.csproj", "{D8780C6E-9AE8-4288-904B-3C9F4CF66CCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flekosoft.Emulation.Iot.Communication.YandexCloud", "Flekosoft.Emulation.Iot.Communication.YandexCloud\Flekosoft.Emulation.Iot.Communication.YandexCloud.csproj", "{0E389EC3-8DB7-43AB-9C0C-825F5A5BBC5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flekosoft.Emulation.Iot.EnvironmentalSensor", "Flekosoft.Emulation.Iot.EnvironmentalSensor\Flekosoft.Emulation.Iot.EnvironmentalSensor.csproj", "{C77D87B0-F4DE-4334-9099-256363003F65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDBAAE59-035D-4027-AFBF-31092C6FA22E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDBAAE59-035D-4027-AFBF-31092C6FA22E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDBAAE59-035D-4027-AFBF-31092C6FA22E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDBAAE59-035D-4027-AFBF-31092C6FA22E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8780C6E-9AE8-4288-904B-3C9F4CF66CCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8780C6E-9AE8-4288-904B-3C9F4CF66CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8780C6E-9AE8-4288-904B-3C9F4CF66CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8780C6E-9AE8-4288-904B-3C9F4CF66CCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E389EC3-8DB7-43AB-9C0C-825F5A5BBC5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E389EC3-8DB7-43AB-9C0C-825F5A5BBC5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E389EC3-8DB7-43AB-9C0C-825F5A5BBC5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E389EC3-8DB7-43AB-9C0C-825F5A5BBC5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C77D87B0-F4DE-4334-9099-256363003F65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C77D87B0-F4DE-4334-9099-256363003F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C77D87B0-F4DE-4334-9099-256363003F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C77D87B0-F4DE-4334-9099-256363003F65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81D2C84D-6EE3-40F7-A612-855799343181}
+	EndGlobalSection
+EndGlobal

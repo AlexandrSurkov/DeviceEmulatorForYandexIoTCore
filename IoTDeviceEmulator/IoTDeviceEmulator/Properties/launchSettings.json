@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "IoTDeviceEmulator": {
+      "commandName": "Project",
+      "commandLineArgs": "--device-id are570ke057oir85l9fr --password brRapM4pT8JScMPb"
+    }
+  }
+}
